@@ -10,21 +10,19 @@ export default class HomeScreen extends Component {
         super();
     }
 
-    goMyPage() {
-        const {navigation} =
-
-            this.props;
-        navigation.navigate('Details');
-    }
 
     render() {
+        const {navigation} = this.props;
         return (
             <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
                 <Text>Home Screen</Text>
                 <Button
                     title="Go to Details"
-                    onPress={() => this.goMyPage()}
-                />
+                    onPress={() => navigation.navigate('Details')}
+                /><Button
+                title="FlexBox布局"
+                onPress={() => navigation.navigate('FlexBoxScreen')}
+            />
             </View>
         );
     }

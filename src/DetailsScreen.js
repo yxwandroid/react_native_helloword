@@ -28,3 +28,6 @@ export default class DetailsScreen extends Component {
     }
 }
 
+
+
+

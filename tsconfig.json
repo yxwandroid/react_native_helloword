@@ -4,7 +4,8 @@
     "allowJs": true,
     "jsx": "react",
     "sourceMap": false,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true
   },
   "exclude": [
     "node_modules"
