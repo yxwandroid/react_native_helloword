@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {StyleSheet, Image, ScrollView, View, Text} from "react-native";
 
-export default class FlexDiceTest extends Component {
+export default class FlexDiceScreen extends Component {
     render() {
         return (
             <ScrollView>
