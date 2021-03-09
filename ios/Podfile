@@ -8,6 +8,10 @@ target 'react_native_helloword' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
+
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
   target 'react_native_hellowordTests' do
     inherit! :complete
     # Pods for testing

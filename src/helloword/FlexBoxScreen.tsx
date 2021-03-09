@@ -6,7 +6,7 @@ import {Text, StyleSheet, View} from 'react-native';
  * https://eddychang.me/flex-react-native
  * 学习 react-native 的布局样式
  */
-class FlexBoxScreen extends Component {
+export default class FlexBoxScreen extends Component {
     static navigationOptions = {title: null};
 
     constructor(props) {
@@ -14,19 +14,11 @@ class FlexBoxScreen extends Component {
         this.state = {};
     }
 
-    componentWillMount() {
-    }
-
-    componentDidMount() {
-    }
-
-
-    componentWillUnmount() {
-    }
 
     render() {
         return (<View style={styles.container}>
             <Text style={styles.textStyle}>1</Text>
+            <Text style={styles.item_flex_end}>1</Text>
             <Text style={styles.textStyle}>2</Text>
             <Text style={styles.textStyle2}>3</Text>
             <Text style={styles.textStyle}>4</Text>
@@ -36,13 +28,11 @@ class FlexBoxScreen extends Component {
             <Text style={styles.textStyle3}>8</Text>
             <Text style={styles.textStyle2}>9</Text>
             <Text style={styles.textStyle}>10</Text>
-            <Text style={styles.textStyle }>11</Text>
+            <Text style={styles.textStyle}>11</Text>
         </View>);
     }
 }
 
-
-export default FlexBoxScreen;
 
 /**
  * flexDirection 属性 设置主轴方向
@@ -86,42 +76,46 @@ export default FlexBoxScreen;
 /**
  * alignSelf 设置自身相对父容器的位置
  */
-const styles = StyleSheet.create(
-    {
-        container: {
-            flex:1,
-            alignSelf:"stretch",
-            backgroundColor:'yellow',
-            flexDirection: 'row',
-            flexWrap:"wrap",
-            alignItems:"center",
-            justifyContent:"center"
-        },
-        textStyle: {
-            marginLeft: 5,
-            textAlign: "center",
-            padding: 10,
-            backgroundColor: 'red'
 
-        },
-        textStyle2: {
-            alignSelf:"center",
-            marginLeft:1,
-            width: 80,
-            height: 80,
-            textAlign: "center",
-            backgroundColor: 'red'
 
-        },
-
-        textStyle3: {
-            marginLeft:10,
-            width: 100,
-            height: 100,
-            textAlign: "center",
-            padding: 20,
-            backgroundColor: 'red'
-
-        }
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignSelf: "stretch",
+        backgroundColor: 'yellow',
+        flexDirection: 'row',
+        flexWrap: "wrap",
+        alignItems: "center",
+        justifyContent: "center"
     },
-);
+    textStyle: {
+        marginLeft: 5,
+        textAlign: "center",
+        padding: 10,
+        backgroundColor: 'red'
+    },
+
+    textStyle2: {
+        alignSelf: "center",
+        marginLeft: 1,
+        width: 80,
+        height: 80,
+        textAlign: "center",
+        backgroundColor: 'red'
+    },
+    textStyle3: {
+        marginLeft: 10,
+        width: 100,
+        height: 100,
+        textAlign: "center",
+        padding: 20,
+        backgroundColor: 'red'
+    },
+    item_flex_end: {
+        backgroundColor: "#f0f",
+        flexGrow: 1,//相当于Android控件中的weight属性
+        margin: 4,
+        height: 300,
+        alignSelf: "flex-end",
+    }
+});
