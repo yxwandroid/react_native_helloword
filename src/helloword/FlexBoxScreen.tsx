@@ -17,18 +17,29 @@ export default class FlexBoxScreen extends Component {
 
     render() {
         return (<View style={styles.container}>
-            <Text style={styles.textStyle}>1</Text>
-            <Text style={styles.item_flex_end}>1</Text>
-            <Text style={styles.textStyle}>2</Text>
-            <Text style={styles.textStyle2}>3</Text>
-            <Text style={styles.textStyle}>4</Text>
-            <Text style={styles.textStyle3}>5</Text>
-            <Text style={styles.textStyle}>6</Text>
-            <Text style={styles.textStyle}>7</Text>
-            <Text style={styles.textStyle3}>8</Text>
-            <Text style={styles.textStyle2}>9</Text>
-            <Text style={styles.textStyle}>10</Text>
-            <Text style={styles.textStyle}>11</Text>
+            <View style={{
+                flexDirection: 'row',
+                width: "100%",
+                height:100,
+                alignItems: "center",
+                backgroundColor: "blue",
+            }}>
+                <Text style={{flex: 10, backgroundColor: "red"}}>hello</Text>
+                <Text style={{flex: 1}}>hello</Text>
+            </View>
+
+            {/*<Text style={styles.textStyle}>1</Text>*/}
+            {/*<Text style={styles.item_flex_end}>1</Text>*/}
+            {/*<Text style={styles.textStyle}>2</Text>*/}
+            {/*<Text style={styles.textStyle2}>3</Text>*/}
+            {/*<Text style={styles.textStyle}>4</Text>*/}
+            {/*<Text style={styles.textStyle3}>5</Text>*/}
+            {/*<Text style={styles.textStyle}>6</Text>*/}
+            {/*<Text style={styles.textStyle}>7</Text>*/}
+            {/*<Text style={styles.textStyle3}>8</Text>*/}
+            {/*<Text style={styles.textStyle2}>9</Text>*/}
+            {/*<Text style={styles.textStyle}>10</Text>*/}
+            {/*<Text style={styles.textStyle}>11</Text>*/}
         </View>);
     }
 }
@@ -89,6 +100,7 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     },
     textStyle: {
+        flex: 1,
         marginLeft: 5,
         textAlign: "center",
         padding: 10,
