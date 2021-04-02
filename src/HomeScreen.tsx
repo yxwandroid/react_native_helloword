@@ -1,9 +1,8 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment, useRef} from 'react';
 import {
     StyleSheet,
-    Text,
-    TouchableHighlight,
-    View,
+    Animated,
+    View, Text
 } from 'react-native';
 
 
@@ -19,39 +18,33 @@ export default class HomeScreen extends Component<Props, any> {
     render() {
         const {navigation} = this.props
         return (
-            <View style={{flex: 1, alignItems: 'center', justifyContent: 'flex-start'}}>
-                <TouchableHighlight style={styles.buttonStyle}
-                                    onPress={() => navigation.navigate('DetailsScreen')}>
-                    <Text style={styles.textStyle}>详情</Text>
-                </TouchableHighlight>
-                <TouchableHighlight style={styles.buttonStyle} onPress={() => navigation.navigate('FlexBoxScreen')}>
-                    <Text style={styles.textStyle}>Flex布局</Text>
-                </TouchableHighlight>
+            <View style={{}}>
+                <View style={{flexDirection: "column"}}>
+                    <View style={{alignItems: 'flex-end',}}>
+                        <Text style={{
+                            width: 100,
+                            marginBottom: 10,
 
-                <TouchableHighlight style={styles.buttonStyle} onPress={() => navigation.navigate('DemoScreen')}>
-                    <Text style={styles.textStyle}>DemoScreen</Text>
-                </TouchableHighlight>
+                            backgroundColor: "#ff22ff",
+                            height: 60
+                        }}>niaho </Text>
+                    </View>
+
+                    <View style={{alignItems: "flex-end"}}>
+                        <Text style={{height: 20, backgroundColor: "#992277"}}>2 </Text>
+                    </View>
+
+                    <View style={{alignItems: 'center',}}>
+                        <Text style={{height: 26, backgroundColor: "#002277"}}>niaho </Text>
+                    </View>
+
+                    <View style={{alignItems: "center"}}>
+                        <Text style={{height: 24, backgroundColor: "#009977"}}>niaho </Text>
+                    </View>
+
+                </View>
             </View>
-        );
+        )
     }
 }
-
-
-
-const styles = StyleSheet.create({
-    buttonStyle: {
-        margin: 5,
-        backgroundColor: '#ffffff',
-    },
-
-    textStyle: {
-        fontSize: 20,
-        textAlign: 'center',
-        padding: 10,
-        backgroundColor: '#ffff77',
-
-    },
-
-});
-
 
