@@ -12,26 +12,15 @@ target 'react_native_helloword' do
 
   pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
 
-  target 'react_native_hellowordTests' do
-    inherit! :complete
-    # Pods for testing
-  end
-
   # Enables Flipper.
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
   # you should disable these next few lines.
-  use_flipper!
-  post_install do |installer|
-    flipper_post_install(installer)
-  end
+#  use_flipper!
+#  use_flipper!({ 'Flipper' => '0.95.0' })
+#  use_flipper!({ 'Flipper-Folly' => '2.3.0' })
+#  post_install do |installer|
+#    flipper_post_install(installer)
+#  end
 end
 
-target 'react_native_helloword-tvOS' do
-  # Pods for react_native_helloword-tvOS
-
-  target 'react_native_helloword-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-end
